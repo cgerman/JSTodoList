@@ -1,17 +1,17 @@
-import AddTodo from "./components/add-todo.js";
-import Modal from "./components/modal.js";
-import Filters from "./components/filters.js";
+import AddTodoForm from "./view-components/add-todo.js";
+import Modal from "./view-components/modal.js";
+import Filters from "./view-components/filters.js";
 
 export default class View {
     constructor() {
         this.model = null;
         this.table = document.getElementById('table');
-        this.addTodoForm = new AddTodo();
-        this.addTodoForm.onclick((title, description) => this.addTodo(title, description));
+        this.addTodoForm = new AddTodoForm();
+        this.addTodoForm.setOnClick((title, description) => this.addTodo(title, description));
         this.modal = new Modal();
-        this.modal.onClick ((id, values) => this.editTodo(id, values)); 
+        this.modal.setOnClick ((id, values) => this.editTodo(id, values)); 
         this.filters = new Filters();
-        this.filters.onClick((filters) => this.filter(filters));
+        this.filters.setOnClick((filters) => this.filter(filters));
     }
 
     setModel(model) {
@@ -68,6 +68,7 @@ export default class View {
             } else {
                 row.classList.remove('d-none');
             }
+            console.log(row, shouldHide);  
         }
     }
 

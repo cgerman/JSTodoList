@@ -4,7 +4,7 @@ export default class Filters {
         this.btn = document.getElementById('search');
     }
 
-    onClick(callback) {
+    setOnClick(callback) {
         this.btn.onclick = (e) => {
             e.preventDefault();
             const data = new FormData (this.form);

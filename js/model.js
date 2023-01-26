@@ -35,7 +35,6 @@ export default class Model {
             completed: false
         };
         this.todos.push(todo);
-        console.log(this.todos);
         this.save();
         return {...todo}; // devuelve un clon de todo
     }

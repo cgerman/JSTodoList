@@ -17,7 +17,7 @@ export default class Modal {
         this.completed.checked = todo.completed;
     }
 
-    onClick (callback) {
+    setOnClick (callback) {
         this.btn.onclick = () => {
             if (this.title.value==='' || this.description.value==='') {
                 this.alert.show('Title and description are both required');
