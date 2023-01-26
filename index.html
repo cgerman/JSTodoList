@@ -17,6 +17,8 @@
   <title>JS Todo List</title>
 </head>
 <body>
+  <!-- Navbar -->
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">JS Todo List</a>
     <button
@@ -41,7 +43,7 @@
       </ul>
       <form class="form-inline my-2 my-lg-0" id="filters">
         <label class="font-weight-bold text-info mr-3">Filters</label>
-        <input type="radio" name="type" value="all" class="mx-1">
+        <input type="radio" name="type" value="all" class="mx-1" checked >
         <label for="male" class="mb-0">All</label>
         <input type="radio" name="type" value="completed" class="mx-1">
         <label for="female" class="mb-0">Completed</label>
@@ -63,6 +65,7 @@
   </nav>
 
   <!-- Modal -->
+  
   <div
     class="modal fade"
     id="modal"
@@ -135,6 +138,8 @@
         A simple danger alert—check it out!
       </div>
 
+      <!-- Add Todo -->
+
       <div>
         <form> 
           <div class="row">
@@ -164,6 +169,8 @@
           </div>
         </form>
       </div>
+
+      <!-- Table -->
 
       <div class="mt-5">
         <table class="table table-striped" id="table">
@@ -196,6 +203,6 @@
   <!-- Bootstrap -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
   <!-- JS Code -->
-  <script src="js/index.js" type="module"></script>
+  <script src="./js/index.js" type="module"></script>
 </body>
 </html>
