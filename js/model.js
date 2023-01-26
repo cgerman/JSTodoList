@@ -44,6 +44,12 @@ export default class Model {
         return this.todos.findIndex((todo) => todo.id === id);
     }
 
+    editTodo(id, values) {
+        const index = this.findTodo(id);
+        Object.assign(this.todos[index], values);
+        this.save();
+    }
+
     removeTodo (id) {
         const index = this.findTodo(id);
         this.todos.splice(index, 1);
