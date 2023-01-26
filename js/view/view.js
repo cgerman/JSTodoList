@@ -1,6 +1,6 @@
-import AddTodoForm from "./view-components/add-todo.js";
-import Modal from "./view-components/modal.js";
-import Filters from "./view-components/filters.js";
+import AddTodoForm from "./components/add-todo.js";
+import Modal from "./components/modal.js";
+import Filters from "./components/filters.js";
 
 export default class View {
     constructor() {
