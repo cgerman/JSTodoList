@@ -3,6 +3,8 @@ export default class Alert {
         this.alert = document.getElementById(alertId);
     }
 
+    render() {}
+
     show (message) {
         this.alert.innerText = message;
         this.alert.classList.remove('d-none');        

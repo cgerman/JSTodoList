@@ -10,6 +10,9 @@ export default class Modal {
         this.todo = null;
     }
 
+    render() {        
+    }
+
     setValues(todo) {
         this.todo = todo;
         this.title.value = todo.title;
@@ -17,7 +20,7 @@ export default class Modal {
         this.completed.checked = todo.completed;
     }
 
-    setOnClick (callback) {
+    setOnValidatedInput (callback) {
         this.btn.onclick = () => {
             if (this.title.value==='' || this.description.value==='') {
                 this.alert.show('Title and description are both required');
